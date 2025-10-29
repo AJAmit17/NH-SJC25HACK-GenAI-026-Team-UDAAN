@@ -1,363 +1,445 @@
-# FinRegent
+<div align="center">
+  <h1>FinRegent</h1>
+  <p><strong>Agentic AI for Financial Governance & Compliance</strong></p>
+  <p>Multi-agent reasoning with real-time regulatory intelligence for financial institutions</p>
 
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js&logoColor=white)
-![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+  <p>
+    <a href="https://nextjs.org/">
+      <img src="https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js&logoColor=white" alt="Next.js 15" />
+    </a>
+    <a href="https://www.typescriptlang.org/">
+      <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript" />
+    </a>
+    <a href="https://react.dev/">
+      <img src="https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React 19" />
+    </a>
+    <a href="https://www.prisma.io/">
+      <img src="https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white" alt="Prisma" />
+    </a>
+    <a href="https://www.mongodb.com/">
+      <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB" />
+    </a>
+  </p>
+</div>
 
-An AI-powered financial regulatory compliance platform built with Next.js and Lyzr AI. FinRegent helps organizations navigate complex financial regulations through intelligent chat-based assistance, comprehensive document management, and team collaboration.
+---
 
-[Overview](#overview) • [Features](#features) • [Getting Started](#getting-started) • [Architecture](#architecture) • [Configuration](#configuration)
+FinRegent is an enterprise-grade AI compliance platform that transforms how financial institutions manage regulatory requirements. Built on an **Agentic RAG Framework**, it provides autonomous reasoning capabilities to help compliance teams navigate complex regulations from RBI, SEBI, and other regulatory bodies with confidence and transparency.
 
-## Overview
+---
 
-FinRegent is a comprehensive compliance intelligence platform that combines **Agentic RAG Framework** with real-time regulatory knowledge to help financial institutions maintain compliance with RBI, SEBI, and other regulatory bodies. The platform leverages Lyzr AI agents for autonomous reasoning and provides explainable AI-driven compliance workflows.
+FinRegent is an enterprise-grade AI compliance platform that transforms how financial institutions manage regulatory requirements. Built on an **Agentic RAG Framework**, it provides autonomous reasoning capabilities to help compliance teams navigate complex regulations from RBI, SEBI, and other regulatory bodies with confidence and transparency.
 
-**Key Capabilities:**
+## Why FinRegent?
 
-- **Intelligent Compliance Assistant**: Get instant, contextual answers to regulatory questions using advanced AI models trained on financial regulations
-- **Multi-Agent Reasoning**: Autonomous agents that can understand, reason, and provide actionable compliance guidance
-- **Unified Knowledge Base**: Seamlessly integrate RBI guidelines, SEBI compliance requirements, and internal policies
-- **Document Intelligence**: Advanced document management with categorization, tagging, and search
-- **Compliance Tracking**: Monitor compliance reviews, risk assessments, and regulatory updates
-- **Team Collaboration**: Work together on compliance matters with role-based access
+Financial compliance is complex, time-consuming, and constantly evolving. FinRegent simplifies this challenge by:
+
+- **Understanding Context**: Ask questions in natural language and receive precise, contextual answers backed by regulatory sources
+- **Autonomous Reasoning**: Multi-agent system that can analyze, cross-reference, and provide explainable compliance guidance
+- **Real-time Intelligence**: Automatic monitoring and integration of regulatory updates from multiple sources
+- **Unified Knowledge**: Seamlessly combines RBI guidelines, SEBI requirements, and internal policies in one intelligent system
 
 ## Features
 
-### AI-Powered Compliance
+### 🤖 AI-Powered Compliance Assistant
 
-- **Smart Chat Interface**: Natural language interactions with an AI agent trained on financial regulations
-- **Contextual Responses**: Get relevant answers with source citations and confidence scores
-- **Multi-Turn Conversations**: Maintain context across conversation sessions
-- **Streaming Responses**: Real-time response generation with markdown support
+Natural language chat interface powered by Lyzr AI agents trained on financial regulations. Get instant answers to compliance questions with:
 
-### Document Management
+- **Contextual Understanding**: Multi-turn conversations that maintain context across sessions
+- **Source Attribution**: Every response includes citations and confidence scores
+- **Voice Interaction**: Hands-free compliance queries with voice input/output
+- **Streaming Responses**: Real-time answer generation with rich markdown formatting
 
-- **Knowledge Base**: Centralized repository for regulatory documents, guidelines, and policies
-- **Document Classification**: Automatic categorization by source (RBI, SEBI, Internal) and category
+### 📚 Intelligent Document Management
+
+Centralized knowledge base for all regulatory documents:
+
+- **Auto-Classification**: Automatic categorization by source (RBI, SEBI, Internal) and category
+- **Smart Search**: Tag-based filtering and full-text search across all documents
+- **AI Processing**: Automated summarization and key point extraction
 - **Version Control**: Track document changes and maintain compliance history
-- **Advanced Search**: Tag-based filtering and full-text search capabilities
 
-### Compliance Workflow
+### 🔄 Automated Regulatory Updates
 
-- **Risk Assessment**: Automated identification of potential compliance risks
-- **Compliance Reviews**: Track and manage compliance review processes
-- **Query Management**: Log and respond to compliance queries with AI assistance
-- **Audit Trail**: Complete history of all compliance-related activities
+Stay current with evolving regulations:
 
-### Security & Authentication
+- **Scheduled Monitoring**: Automated bi-weekly checks for regulatory updates
+- **Link Extraction**: AI agent extracts relevant links from regulatory websites
+- **Knowledge Base Training**: Automatically trains RAG system with new information
+- **Email Notifications**: Get notified when your knowledge base is updated
 
-- **Enterprise Authentication**: Clerk-powered secure authentication with SSO support
-- **API Security**: Signed API requests with signature verification
-- **Webhook Integration**: Real-time user synchronization
+### 🔐 Enterprise Security
+
+Built with security and compliance in mind:
+
+- **Clerk Authentication**: Enterprise-grade SSO and user management
+- **API Signature Verification**: Cryptographic signatures for all API requests
+- **Webhook Integration**: Real-time user synchronization with audit trails
 - **Role-Based Access**: Granular permission controls (coming soon)
 
-### User Experience
+### 🎨 Modern User Experience
 
-- **Modern UI**: Beautiful, responsive interface built with Shadcn UI and Tailwind CSS
-- **Dark Mode**: Full dark mode support with persistent preferences
-- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
-- **Accessibility**: WCAG 2.1 compliant components
+Beautiful, responsive interface that works everywhere:
 
-## Getting Started
+- **Dark Mode Support**: Full theme customization with persistent preferences
+- **Responsive Design**: Optimized for desktop, tablet, and mobile
+- **Accessibility First**: WCAG 2.1 compliant UI components
+- **Real-time Updates**: Live activity tracking with visual timeline
+
+## Quick Start
 
 ### Prerequisites
 
-- **Node.js** 18.x or higher
-- **npm** or **yarn** package manager
-- **MongoDB** database (local or Atlas)
-- **Clerk** account for authentication
-- **Lyzr AI** account and API credentials
+- Node.js 18.x or higher
+- MongoDB database (local or [MongoDB Atlas](https://www.mongodb.com/cloud/atlas))
+- [Clerk](https://clerk.com/) account for authentication
+- [Lyzr AI](https://lyzr.ai/) account and API credentials
 
 ### Installation
 
-1. **Clone the repository**
+1. Clone the repository:
 
 ```bash
-git clone https://github.com/AJAmit17/FinRegent
-cd FinRegent
+git clone https://github.com/AJAmit17/NH-SJC25HACK-GenAI-026-Team-UDAAN.git
+cd NH-SJC25HACK-GenAI-026-Team-UDAAN
 ```
 
-2. **Install dependencies**
+2. Install dependencies:
 
 ```bash
 npm install
 ```
 
-3. **Set up environment variables**
+3. Configure environment variables:
 
-Copy the example environment file and configure your credentials:
+Create a `.env` file in the root directory:
 
-```bash
-cp .env.example .env
+```env
+# Clerk Authentication
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
+CLERK_SECRET_KEY=sk_test_...
+CLERK_WEBHOOK_SECRET=whsec_...
+
+# Database
+DATABASE_URL="mongodb+srv://..."
+
+# Lyzr AI
+LYZR_API_KEY=sk-default-...
+LYZR_AGENT_ID=...
+LYZR_RAG_ID=...
+LYZR_UPDATES_AGENT_ID=...
+LYZR_LINK_EXTRACTION_AGENT_ID=...
+LYZR_AUTO_RAG_ID=...
+
+# Security
+API_SIGNATURE_SECRET=your_random_secret_min_32_chars
+
+# Inngest (for scheduled jobs)
+INNGEST_SIGNING_KEY=...
+INNGEST_EVENT_KEY=...
+
+# Email Notifications
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_SECURE=false
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-app-password
 ```
 
-Edit `.env` with your actual credentials (see [Configuration](#configuration) section).
-
-4. **Initialize the database**
+4. Initialize the database:
 
 ```bash
 npx prisma generate
 npx prisma db push
 ```
 
-5. **Start the development server**
+5. Start the development server:
 
 ```bash
 npm run dev
 ```
 
-The application will be available at [http://localhost:3000](http://localhost:3000).
+Visit [http://localhost:3000](http://localhost:3000) to see your application.
 
 ## Architecture
 
+### Architecture Diagram
+
+<p align="center">
+  <img src=".github/assets/architecture-diagram.png" alt="FinRegent system architecture" width="100%" />
+</p>
+
+- **Client Layer**: Next.js UI with Clerk-secured access.
+- **Services Layer**: Lyzr agents, Prisma API, and signature verification.
+- **Data & Jobs**: MongoDB storage plus Inngest-driven regulatory updates.
+
 ### Tech Stack
 
-- **Framework**: Next.js 15 with App Router and React Server Components
-- **Language**: TypeScript for type-safe development
-- **UI Library**: React 19 with Shadcn UI components
-- **Styling**: Tailwind CSS with custom design system
-- **Database**: MongoDB with Prisma ORM
-- **Authentication**: Clerk for user management
-- **AI Integration**: Lyzr AI agents for compliance intelligence
-- **State Management**: TanStack Query (React Query)
-- **Forms**: React Hook Form with Zod validation
-- **Icons**: Tabler Icons and Lucide React
+| Category | Technologies |
+|----------|-------------|
+| **Framework** | Next.js 15 (App Router), React 19 |
+| **Language** | TypeScript |
+| **Database** | MongoDB + Prisma ORM |
+| **Authentication** | Clerk |
+| **AI/ML** | Lyzr AI Agents |
+| **Styling** | Tailwind CSS, Shadcn UI |
+| **State Management** | TanStack Query (React Query) |
+| **Background Jobs** | Inngest |
+| **Email** | Nodemailer |
+| **Real-time** | Server-Sent Events (SSE) |
+
+### Key Components
+
+#### Multi-Agent System
+
+FinRegent uses a specialized multi-agent architecture:
+
+- **Chat Agent**: Main conversational interface for compliance queries
+- **Link Extraction Agent**: Automatically discovers relevant regulatory documents
+- **Updates Agent**: Monitors and processes regulatory changes
+- **RAG Agent**: Retrieves and augments responses with knowledge base context
+
+#### API Security Layer
+
+All API requests use cryptographic signature verification:
+
+```typescript
+// Client generates signature
+const signature = await generateSignatureAction(JSON.stringify(payload));
+
+// Server verifies signature
+const isValid = verifyApiSignature(payload, signature);
+```
+
+This ensures request integrity and prevents unauthorized API access.
+
+#### Automated Training Pipeline
+
+```
+User Enables Cron Job
+       ↓
+Inngest Scheduled Function (Every 2 weeks)
+       ↓
+Link Extraction Agent → Discovers new regulatory documents
+       ↓
+RAG Agent → Trains knowledge base with new content
+       ↓
+Email Notification → User receives update summary
+```
 
 ### Project Structure
 
 ```
 finregent/
 ├── prisma/
-│   └── schema.prisma              # Database models and schema
-├── public/
-│   └── assets/                    # Static assets and images
+│   └── schema.prisma              # Database schema (User, Document, Chat, etc.)
 ├── src/
 │   ├── actions/
-│   │   └── generate-signature.ts  # Server actions for API security
+│   │   ├── api-key.ts            # Server action to fetch API keys
+│   │   └── generate-signature.ts  # Cryptographic signature generation
 │   ├── app/
-│   │   ├── (auth)/                # Authentication routes (public)
-│   │   │   ├── sign-in/
-│   │   │   └── sign-up/
-│   │   ├── (routes)/              # Protected application routes
-│   │   │   ├── page.tsx           # Landing/dashboard page
-│   │   │   ├── documents/         # Document management
-│   │   │   ├── settings/          # User settings
-│   │   │   ├── team/              # Team collaboration
-│   │   │   ├── updates/           # Regulatory updates
-│   │   │   └── workspace/         # Main workspace with chat
-│   │   ├── api/
-│   │   │   ├── lyzr/chat/         # Chat API endpoint
-│   │   │   └── users/webhook/     # Clerk user sync webhook
-│   │   ├── globals.css            # Global styles
-│   │   └── layout.tsx             # Root layout
+│   │   ├── (auth)/               # Public authentication routes
+│   │   ├── (routes)/             # Protected application routes
+│   │   │   ├── workspace/        # Main chat workspace
+│   │   │   ├── documents/        # Document management
+│   │   │   ├── settings/         # User preferences
+│   │   │   └── updates/          # Regulatory updates feed
+│   │   └── api/
+│   │       ├── lyzr/chat/        # Chat API with signature verification
+│   │       ├── users/webhook/    # Clerk user synchronization
+│   │       └── inngest/          # Background job endpoints
 │   ├── components/
-│   │   ├── chat.tsx               # Main chat interface component
-│   │   ├── provider/              # React Query and Theme providers
-│   │   ├── sidebar/               # Navigation sidebar components
-│   │   ├── shared/                # Shared components (Timeline, etc.)
-│   │   └── ui/                    # Shadcn UI component library
-│   ├── hooks/
-│   │   ├── use-mobile.ts          # Mobile detection hook
-│   │   └── use-toast.ts           # Toast notification hook
+│   │   ├── chat.tsx              # Main chat interface
+│   │   ├── sidebar/              # Navigation components
+│   │   ├── shared/               # Reusable components (Timeline, VoiceChat)
+│   │   └── ui/                   # Shadcn UI library (50+ components)
 │   ├── lib/
-│   │   ├── lyzrService.ts         # Lyzr AI integration service
-│   │   ├── prisma.ts              # Prisma client singleton
-│   │   ├── security.ts            # API signature utilities
-│   │   └── utils.ts               # Utility functions
-│   ├── types/
-│   │   └── clerk-webhook.ts       # Clerk webhook type definitions
-│   └── middleware.ts              # Next.js middleware for auth
-├── .env.example                    # Environment variables template
+│   │   ├── lyzrService.ts        # Lyzr AI integration
+│   │   ├── security.ts           # Signature & webhook verification
+│   │   ├── prisma.ts             # Database client
+│   │   ├── email.ts              # Email service
+│   │   └── inngest/              # Background job definitions
+│   └── middleware.ts             # Auth & route protection
 └── package.json
 ```
 
-### Database Schema
-
-The application uses MongoDB with the following main models:
-
-- **User**: User accounts synced from Clerk
-- **Document**: Regulatory documents and knowledge base
-- **Query**: User compliance queries with AI responses
-- **ComplianceReview**: Compliance review workflow tracking
-- **RegulatoryUpdate**: Tracking of regulatory changes
-- **AuditLog**: Comprehensive audit trail
-
 ## Configuration
-
-### Environment Variables
-
-Create a `.env` file in the root directory with the following variables:
-
-#### Clerk Authentication
-
-```env
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_your_publishable_key
-CLERK_SECRET_KEY=sk_test_your_secret_key
-CLERK_WEBHOOK_SECRET=whsec_your_webhook_secret
-
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL=/
-NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL=/
-```
-
-#### Database
-
-```env
-DATABASE_URL="mongodb+srv://username:password@cluster.mongodb.net/finregent?retryWrites=true&w=majority"
-```
-
-#### Lyzr AI
-
-```env
-LYZR_API_KEY=sk-default-your_lyzr_api_key
-LYZR_AGENT_ID=your_agent_id
-```
-
-#### Security
-
-```env
-API_SIGNATURE_SECRET=your_random_secret_key_min_32_chars
-```
 
 ### Setting up Clerk
 
-1. Create an application at [Clerk Dashboard](https://dashboard.clerk.com/)
-2. Configure authentication methods (Email, Google, etc.)
-3. Copy your API keys to `.env`
-4. Set up a webhook endpoint:
+1. Create an application at [clerk.com](https://clerk.com/)
+2. Configure sign-in options (Email, Google, etc.)
+3. Copy API keys to `.env`
+4. Add webhook endpoint:
    - URL: `https://your-domain.com/api/users/webhook`
    - Events: `user.created`, `user.updated`, `user.deleted`
-   - Copy the webhook secret to `.env`
 
 ### Setting up Lyzr AI
 
-1. Sign up at [Lyzr AI](https://lyzr.ai/)
-2. Create a new AI agent in the dashboard
-3. Train the agent on your compliance documents
-4. Copy the API key and Agent ID to `.env`
+1. Sign up at [lyzr.ai](https://lyzr.ai/)
+2. Create AI agents for:
+   - **Main Chat Agent**: Compliance Q&A
+   - **Link Extraction Agent**: Document discovery
+   - **Updates Agent**: Regulatory monitoring
+   - **RAG Agent**: Knowledge base management
+3. Train agents with your regulatory documents
+4. Copy agent IDs to `.env`
 
-### Setting up MongoDB
+### Setting up Automated Updates
 
-1. Create a database at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
-2. Whitelist your IP address
-3. Create a database user
-4. Copy the connection string to `.env`
-5. Run `npx prisma db push` to create the schema
+> [!NOTE]
+> The automated training pipeline requires Inngest for scheduled jobs.
+
+1. Create account at [inngest.com](https://www.inngest.com/)
+2. Create a new app and copy keys to `.env`
+3. Users can enable/disable automated updates in Settings
+4. System runs bi-weekly (configurable in `src/lib/inngest/functions.ts`)
 
 ## Development
 
 ### Available Scripts
 
-```bash
-npm run dev          # Start development server with Turbopack
-npm run build        # Build production bundle
-npm run start        # Start production server
-npm run lint         # Run ESLint
-npx prisma studio    # Open Prisma Studio (database GUI)
-npx prisma db push   # Push schema changes to database
-npx prisma generate  # Generate Prisma Client
-```
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server with Turbopack |
+| `npm run build` | Build production bundle |
+| `npm run start` | Start production server |
+| `npm run lint` | Run ESLint |
+| `npx prisma studio` | Open database GUI |
+| `npx prisma db push` | Push schema changes to DB |
 
-### API Routes
+### API Endpoints
 
-#### POST `/api/lyzr/chat`
+#### `POST /api/lyzr/chat`
 
-Send a message to the Lyzr AI agent.
+Send a message to the AI compliance assistant.
 
-**Request Body:**
+**Request:**
 ```json
 {
-  "message": "What are the KYC requirements?",
-  "sessionId": "optional-session-id"
+  "message": "What are the KYC requirements for banks?",
+  "sessionId": "optional-session-id",
+  "agentId": "your-agent-id",
+  "userId": "user-id",
+  "signature": "generated-signature",
+  "assets": ["optional-file-ids"]
 }
 ```
 
 **Response:**
 ```json
 {
-  "response": "AI response content",
-  "session_id": "session-identifier",
-  "user_id": "user-identifier"
+  "response": "AI response content...",
+  "session_id": "session-id",
+  "user_id": "user-id"
 }
 ```
 
-#### POST `/api/users/webhook`
+#### `POST /api/users/webhook`
 
-Clerk webhook endpoint for user synchronization. Automatically syncs user data to MongoDB.
+Clerk webhook endpoint for user synchronization.
+
+**Events handled:**
+- `user.created` - Creates user in MongoDB
+- `user.updated` - Updates user information
+- `user.deleted` - Removes user and associated data
+
+#### `POST /api/lyzr/upload`
+
+Upload documents to Lyzr AI for processing.
+
+**Request:** Multipart form data with files
+
+**Response:**
+```json
+{
+  "assets": [
+    {
+      "asset_id": "...",
+      "filename": "document.pdf"
+    }
+  ]
+}
+```
 
 ## Deployment
 
 ### Deploy to Vercel
 
-The easiest way to deploy is using [Vercel](https://vercel.com):
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/AJAmit17/NH-SJC25HACK-GenAI-026-Team-UDAAN)
 
 1. Push your code to GitHub
-2. Import the repository in Vercel
-3. Add environment variables in Vercel dashboard
+2. Import repository in [Vercel](https://vercel.com)
+3. Add environment variables
 4. Deploy
 
-> [!NOTE]
-> Make sure to update the Clerk webhook URL to your production domain after deployment.
+> [!IMPORTANT]
+> Update Clerk webhook URL to your production domain after deployment.
 
-### Environment Configuration
+### Environment Checklist
 
-Ensure all environment variables are set in your deployment platform:
-- Clerk credentials
-- MongoDB connection string
-- Lyzr AI credentials
-- API signature secret
+Ensure all variables are set:
+- ✅ Clerk credentials (publishable key, secret, webhook secret)
+- ✅ MongoDB connection string
+- ✅ All Lyzr AI agent IDs and API key
+- ✅ API signature secret (min 32 characters)
+- ✅ Inngest keys (for automated updates)
+- ✅ Email configuration (for notifications)
 
 ## Troubleshooting
 
-### Common Issues
+<details>
+<summary><strong>Database Connection Issues</strong></summary>
 
-**Database Connection Error**
 - Verify MongoDB connection string format
 - Check IP whitelist in MongoDB Atlas
-- Ensure database user has correct permissions
+- Ensure database user has read/write permissions
 - Run `npx prisma generate` to regenerate client
+</details>
 
-**Clerk Authentication Issues**
-- Verify API keys in `.env`
-- Check redirect URLs match your domain
-- Ensure webhook is properly configured
-- Clear browser cookies and try again
+<details>
+<summary><strong>Authentication Errors</strong></summary>
 
-**Lyzr AI Not Responding**
-- Verify API key and agent ID
-- Check agent is properly trained
-- Review network tab for API errors
-- Ensure API signature is being generated correctly
+- Verify Clerk API keys in `.env`
+- Check that redirect URLs match your domain
+- Ensure webhook endpoint is accessible
+- Clear browser cookies and localStorage
+</details>
 
-**Build Errors**
+<details>
+<summary><strong>AI Not Responding</strong></summary>
+
+- Verify Lyzr API key and agent IDs
+- Check that agents are properly trained
+- Review browser network tab for API errors
+- Ensure signature generation is working (check console)
+</details>
+
+<details>
+<summary><strong>Build Errors</strong></summary>
+
 - Delete `.next` folder and `node_modules`
-- Run `npm install` again
-- Check TypeScript errors with `npm run lint`
+- Run `npm install` fresh
+- Check for TypeScript errors with `npm run lint`
 - Ensure all environment variables are set
-
-> [!TIP]
-> Check the browser console and server logs for detailed error messages. Enable debug logging by setting `NODE_ENV=development`.
+</details>
 
 ## Resources
-
-### Documentation
 
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Clerk Documentation](https://clerk.com/docs)
 - [Lyzr AI Documentation](https://docs.lyzr.ai/)
 - [Prisma Documentation](https://www.prisma.io/docs)
-- [Shadcn UI](https://ui.shadcn.com/)
-- [Tailwind CSS](https://tailwindcss.com/docs)
-- [React Query](https://tanstack.com/query/latest)
-
-### Regulatory Resources
-
-- [RBI Guidelines](https://www.rbi.org.in/)
+- [Shadcn UI Components](https://ui.shadcn.com/)
+- [RBI Regulatory Guidelines](https://www.rbi.org.in/)
 - [SEBI Regulations](https://www.sebi.gov.in/)
-- [Financial Compliance Resources](https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx)
 
 ---
 
-Built with ❤️ By Team UDAAN
+<div align="center">
+  <p>Built with ❤️ by <strong>Team UDAAN</strong></p>
+  <p>
+    <a href="https://github.com/AJAmit17/NH-SJC25HACK-GenAI-026-Team-UDAAN">GitHub</a> •
+    <a href="https://lyzr.ai/">Powered by Lyzr AI</a>
+  </p>
+</div>
