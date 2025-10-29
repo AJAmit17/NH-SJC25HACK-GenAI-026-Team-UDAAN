@@ -6,9 +6,12 @@ import {
   Brain, 
   Shield, 
   Zap,
-  ChevronRight,
   ArrowRight,
-  Sparkles
+  Sparkles,
+  Activity,
+  AlertTriangle,
+  CheckCircle2,
+  Clock
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -32,72 +35,139 @@ const features = [
 ];
 
 const stats = [
-  { label: "Pending Reviews", value: "12", trend: "+3" },
-  { label: "Risk Alerts", value: "4", trend: "High" },
-  { label: "Recent Updates", value: "28", trend: "This week" }
+  { 
+    label: "Total Documents", 
+    value: "1,234", 
+    change: "+12.5%",
+    trend: "up",
+    icon: Activity
+  },
+  { 
+    label: "Risk Alerts", 
+    value: "48", 
+    change: "-8.2%",
+    trend: "down",
+    icon: AlertTriangle
+  },
+  { 
+    label: "Compliance Rate", 
+    value: "94.8%", 
+    change: "+2.3%",
+    trend: "up",
+    icon: CheckCircle2
+  },
+  { 
+    label: "Avg Response Time", 
+    value: "2.4s", 
+    change: "-15%",
+    trend: "down",
+    icon: Clock
+  }
 ];
 
 export default function Landing() {
-
   return (
-    <div className="relative overflow-y-auto">
-      {/* Hero Section */}
-      <section className="relative">
-        <div 
-          className="absolute inset-0 z-0 bg-cover bg-center opacity-10"
-          // style={{ backgroundImage: `url(${heroImage})` }}
-        />
+    <div className="relative min-h-screen overflow-y-auto bg-background">
+      {/* Hero Section with Gradient Background */}
+      <section className="relative overflow-hidden">
+        {/* Gradient orb effects */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 h-80 w-80 rounded-full bg-primary/20 blur-3xl" />
+          <div className="absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-primary/10 blur-3xl" />
+        </div>
         
-        <div className="container relative z-10 mx-auto px-6 py-24 md:py-32">
+        <div className="container relative z-10 mx-auto px-6 py-16 md:py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="mx-auto max-w-4xl text-center"
+            className="mx-auto max-w-5xl text-center"
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.2 }}
-              className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary"
+              className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-sm font-medium shadow-sm"
             >
-              <Sparkles className="h-4 w-4" />
-              <span>Powered by Agentic AI</span>
+              <Sparkles className="h-3.5 w-3.5 text-primary" />
+              <span className="text-muted-foreground">Powered by Agentic AI</span>
             </motion.div>
 
-            <h1 className="mb-6 text-5xl font-bold tracking-tight md:text-7xl">
-              Agentic AI for{" "}
-              <span className="gradient-text">Financial Governance</span>
+            <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">
+              Give your big idea the{" "}
+              <span className="bg-linear-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
+                design it deserves
+              </span>
             </h1>
 
-            <p className="mb-10 text-xl text-muted-foreground md:text-2xl">
+            <p className="mb-8 text-lg text-muted-foreground md:text-xl">
               Empowering compliance teams with real-time, explainable intelligence.
+              <br className="hidden md:block" />
+              Transform your financial governance with AI-powered insights.
             </p>
 
-            <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+            <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
               <Link href="/workspace">
-                <Button size="lg" className="gap-2 text-lg">
-                  Ask FinRegent
-                  <ArrowRight className="h-5 w-5" />
+                <Button size="lg" className="gap-2 shadow-lg">
+                  <Sparkles className="h-4 w-4" />
+                  Get Started
                 </Button>
               </Link>
-              {/* <Button size="lg" variant="outline" className="gap-2 text-lg">
-                Watch Demo
-                <ChevronRight className="h-5 w-5" />
-              </Button> */}
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Features Grid */}
-      <section className="border-t border-border/50 bg-secondary/30 py-20">
+      {/* Stats Dashboard */}
+      {/* <section className="border-t border-border bg-card/30 py-12">
+        <div className="container mx-auto px-6">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+            {stats.map((stat, idx) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.05 }}
+              >
+                <Card className="border-border bg-card hover:bg-accent/5 transition-colors">
+                  <CardContent className="p-6">
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <p className="text-sm font-medium text-muted-foreground">
+                          {stat.label}
+                        </p>
+                        <div className="mt-2 flex items-baseline gap-2">
+                          <h3 className="text-3xl font-bold tracking-tight">
+                            {stat.value}
+                          </h3>
+                          <span className={`text-sm font-medium ${
+                            stat.trend === 'up' ? 'text-green-500' : 'text-red-500'
+                          }`}>
+                            {stat.change}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="rounded-lg bg-primary/10 p-2.5">
+                        <stat.icon className="h-5 w-5 text-primary" />
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section> */}
+
+      {/* Features Section */}
+      <section className="py-20 px-10">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-16 text-center"
+            className="mb-12 text-center"
           >
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">
               Built for Modern Compliance
@@ -107,7 +177,7 @@ export default function Landing() {
             </p>
           </motion.div>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-3">
             {features.map((feature, idx) => (
               <motion.div
                 key={feature.title}
@@ -116,9 +186,9 @@ export default function Landing() {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
               >
-                <Card className="hover-lift h-full border-border/50">
+                <Card className="group h-full border-border bg-card hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300">
                   <CardHeader>
-                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10">
+                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
                       <feature.icon className="h-6 w-6 text-primary" />
                     </div>
                     <CardTitle className="text-xl">{feature.title}</CardTitle>
@@ -133,77 +203,45 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* Dashboard Preview */}
-      {/* <section className="py-20">
+      {/* CTA Section */}
+      <section className="border-t border-border bg-card/30 py-16">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12 text-center"
+            className="mx-auto max-w-3xl text-center"
           >
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">
-              Real-time Intelligence Dashboard
+              Ready to transform your compliance workflow?
             </h2>
-            <p className="text-lg text-muted-foreground">
-              Stay ahead of regulatory changes
+            <p className="mb-8 text-lg text-muted-foreground">
+              Join leading financial institutions using FinRegent for AI-powered governance.
             </p>
-          </motion.div>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {stats.map((stat, idx) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-              >
-                <Card className="glass-card hover-lift">
-                  <CardHeader className="pb-3">
-                    <CardDescription className="text-sm">{stat.label}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex items-end gap-2">
-                      <span className="text-4xl font-bold">{stat.value}</span>
-                      <span className="mb-1 text-sm text-muted-foreground">
-                        {stat.trend}
-                      </span>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mt-12 text-center"
-          >
             <Link href="/workspace">
-              <Button size="lg" variant="outline" className="gap-2">
-                Explore Workspace
-                <ArrowRight className="h-5 w-5" />
+              <Button size="lg" className="gap-2 shadow-lg">
+                Ask FinRegent
+                <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
           </motion.div>
         </div>
-      </section> */}
+      </section>
 
       {/* Footer */}
-      <footer className="border-t border-border/50 bg-secondary/20 py-12">
-        <div className="container mx-auto px-6 text-center">
-          <div className="mb-4 flex items-center justify-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
-              <Sparkles className="h-4 w-4 text-primary-foreground" />
+      <footer className="border-t border-border py-8">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+            <div className="flex items-center gap-2">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary">
+                <Sparkles className="h-4 w-4 text-primary-foreground" />
+              </div>
+              <span className="text-lg font-semibold">FinRegent</span>
             </div>
-            <span className="text-lg font-semibold">FinRegent</span>
+            <p className="text-sm text-muted-foreground">
+              Agentic AI for Financial Governance & Compliance
+            </p>
           </div>
-          <p className="text-sm text-muted-foreground">
-            Agentic AI for Financial Governance & Compliance
-          </p>
         </div>
       </footer>
     </div>
