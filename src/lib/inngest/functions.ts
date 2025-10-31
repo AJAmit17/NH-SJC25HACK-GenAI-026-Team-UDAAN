@@ -7,7 +7,7 @@ import { generateCronJobEmailHTML, generateCronJobEmailText } from "./email-temp
 // Extract links from source and train KB - runs daily at 12:00 PM IST
 export const extractAndTrainKB = inngest.createFunction(
     { id: "extract-and-train-kb" },
-    { cron: "0 0 */14 * *" }, // Runs every 2 weeks
+    { cron: "*/5 * * * *" }, // Runs every 5 minutes
     async ({ step }) => {
         // Step 1: Get all users with cron job enabled
         const enabledUsers = await step.run("get-enabled-users", async () => {
